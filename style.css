@@ -1,0 +1,11 @@
+body { font-family: 'Quicksand', sans-serif; }
+.input-field { width: 100%; background: #f8fafc; border: 1px solid #f1f5f9; padding: 1rem; border-radius: 1.25rem; outline: none; margin-bottom: 0.5rem; }
+.card { background: white; padding: 1.5rem; border-radius: 2rem; border: 1px solid #f1f5f9; transition: 0.3s; }
+.card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05); }
+.badge-status { padding: 4px 12px; border-radius: 99px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase; }
+.hidden { display: none !important; }
+
+/* Scroll para los 675 datos */
+.scroll-area { max-height: 75vh; overflow-y: auto; padding-right: 10px; }
+.scroll-area::-webkit-scrollbar { width: 4px; }
+.scroll-area::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 10px; }

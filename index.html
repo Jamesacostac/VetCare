@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VetCare Pro | Sistema de Datos Masivos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <section id="login-screen" class="min-h-screen flex items-center justify-center p-4">
+        <div class="bg-white p-10 rounded-[2.5rem] shadow-2xl w-full max-w-md border border-slate-100">
+            <div class="text-center mb-8">
+                <h1 class="text-3xl font-bold text-blue-600 italic">VetCare</h1>
+                <p class="text-slate-400 text-sm">Base de Datos de 45 Pacientes</p>
+            </div>
+            <div class="space-y-4">
+                <input type="email" id="login-email" placeholder="correo1@vet.com hasta correo45@vet.com" class="input-field">
+                <select id="login-role" class="input-field">
+                    <option value="doctor">Acceso Médico (Administrador)</option>
+                    <option value="usuario">Acceso Cliente (Dueño)</option>
+                </select>
+                <button onclick="handleLogin()" class="w-full bg-blue-600 text-white py-4 rounded-2xl font-bold shadow-lg">Entrar al Sistema</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="app" class="hidden min-h-screen flex flex-col lg:flex-row">
+        <aside class="w-full lg:w-72 bg-white border-r border-slate-100 p-8 flex flex-col justify-between">
+            <div>
+                <h2 class="text-2xl font-bold text-slate-800 mb-10">VetCare.</h2>
+                <nav id="nav-menu" class="space-y-2"></nav>
+            </div>
+            <button onclick="location.reload()" class="text-red-400 text-sm font-medium">✕ Cerrar Sesión</button>
+        </aside>
+
+        <main class="flex-1 p-6 lg:p-12 overflow-y-auto">
+            <header class="mb-10 flex justify-between items-center">
+                <div id="header-text">
+                    <h3 id="welcome-msg" class="text-3xl font-light"></h3>
+                    <span id="role-badge" class="badge-status bg-blue-50 text-blue-600"></span>
+                </div>
+            </header>
+            <div id="dynamic-content" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        </main>
+    </div>
+
+    <div id="modal-container" class="hidden fixed inset-0 bg-slate-900/40 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+        <div id="modal-content" class="bg-white p-8 rounded-[2.5rem] max-w-2xl w-full shadow-2xl relative max-h-[90vh] overflow-y-auto"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
